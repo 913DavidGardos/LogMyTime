@@ -26,6 +26,9 @@ class Log:
     def _request_command_update(self, date, value):
         self.service.update(date, value)
 
+    def _request_command_chart(self):
+        self.service.print_chart()
+
     def _request_command_print(self):
         self.service.print_today()
 
@@ -58,6 +61,9 @@ class Log:
 
             if array_of_command_args[0] == "update" and len(array_of_command_args) == 3:
                 self._request_command_update(array_of_command_args[1], array_of_command_args[2])
+
+            if command == "chart":
+                self._request_command_chart()
 
             if command == "print":
                 self._request_command_print()

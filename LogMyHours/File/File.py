@@ -3,7 +3,7 @@ import csv
 class File:
     def __init__(self, option):
         self._option = option
-        self._filename = "Loggata.csv"
+        self._filename = "LogMyHours\Loggata.csv"
         if(self._option == 'read'):
             self._csvfile = open(self._filename, newline='')
             self._c = csv.DictReader(self._csvfile)

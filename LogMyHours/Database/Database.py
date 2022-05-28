@@ -59,8 +59,10 @@ class Database:
     def print_today(self):
         size = len(self._map_of_logs)
         print(self._map_of_logs[size - 1]['Date'], self._map_of_logs[size - 1]['Hours'])
-
+    
     def closing_db(self):
         self._myfile = File('write')
         self._myfile.get_file_var().writerows(self._map_of_logs)
         self._myfile.close()
+
+    

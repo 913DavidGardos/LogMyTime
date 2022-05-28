@@ -21,3 +21,6 @@ class Service:
 
     def print_today(self):
         self._db.print_today()
+
+    def print_chart(self):
+        self._db.print_chart()
